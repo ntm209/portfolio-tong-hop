@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ngô Tuấn Minh — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -20,6 +20,8 @@
       --gold: #C9A96E;
       --sage: #8FA882;
       --ink: #1C1410;
+      --font-serif: 'Lora', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -27,7 +29,7 @@
     body {
       background: var(--cream);
       color: var(--deep);
-      font-family: 'DM Sans', sans-serif;
+      font-family: var(--font-sans);
       font-weight: 300;
       overflow-x: hidden;
       cursor: none;
@@ -88,7 +90,7 @@
     .hero-left .bg-text {
       position: absolute;
       top: -20px; left: -10px;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: clamp(120px, 18vw, 220px);
       font-weight: 300;
       color: rgba(255,255,255,0.03);
@@ -113,7 +115,7 @@
     }
 
     .hero-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: clamp(38px, 5vw, 68px);
       font-weight: 300;
       color: var(--warm-white);
@@ -231,7 +233,7 @@
     }
 
     .section-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: clamp(32px, 4vw, 52px);
       font-weight: 300;
       color: var(--deep);
@@ -280,7 +282,7 @@
     }
 
     .about-card-main .initials {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 80px;
       font-weight: 300;
       color: rgba(255,255,255,0.2);
@@ -315,7 +317,7 @@
       display: flex; align-items: center; justify-content: center;
     }
     .about-card-gold span {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 32px;
       color: white;
       font-weight: 300;
@@ -342,7 +344,7 @@
       content: 'PROJECTS';
       position: absolute;
       right: -20px; bottom: -30px;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: clamp(100px, 14vw, 180px);
       font-weight: 300;
       color: rgba(46, 31, 26, 0.03);
@@ -403,7 +405,7 @@
     .doc-card:hover::before { opacity: 1; }
 
     .doc-card-num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 60px;
       font-weight: 300;
       color: rgba(46, 31, 26, 0.04);
@@ -436,7 +438,7 @@
     }
 
     .doc-card-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 22px;
       font-weight: 600;
       color: var(--deep);
@@ -534,7 +536,7 @@
       text-align: center;
     }
     .featured-stat .num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 80px;
       font-weight: 300;
       color: var(--blush);
@@ -553,7 +555,7 @@
       margin-top: 30px;
     }
     .featured-mini-stat .num {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 36px;
       font-weight: 300;
       color: rgba(255,255,255,0.6);
@@ -579,7 +581,7 @@
       content: '回顧';
       position: absolute;
       right: -10px; bottom: -20px;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: clamp(100px, 14vw, 180px);
       font-weight: 300;
       color: rgba(46, 31, 26, 0.025);
@@ -604,7 +606,7 @@
     .summary-reflection p + p { margin-top: 16px; }
 
     .summary-reflection blockquote {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 20px;
       font-style: italic;
       color: var(--rose);
@@ -646,7 +648,7 @@
     }
 
     .summary-card h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 20px;
       font-weight: 600;
       color: var(--deep);
@@ -695,7 +697,7 @@
       position: absolute;
       right: -30px; top: 50%;
       transform: translateY(-50%) rotate(90deg);
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 100px;
       font-weight: 300;
       color: rgba(255,255,255,0.06);
@@ -705,7 +707,7 @@
     }
 
     .contact-left h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: clamp(36px, 5vw, 60px);
       font-weight: 300;
       color: white;
@@ -751,7 +753,7 @@
     }
 
     .footer-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: var(--font-serif);
       font-size: 18px;
       font-weight: 300;
       color: rgba(255,255,255,0.4);
@@ -814,11 +816,14 @@
     </div>
     <div class="hero-right">
       <p class="section-label" style="opacity:0;animation:fadeUp 0.8s 0.4s forwards">Ngành học</p>
-      <h2 class="hero-major">Công nghệ<br/>Ứng dụng</h2>
-      <p class="hero-desc">
+      <h2 class="hero-major">Khoa học &amp;<br/>Kỹ thuật Máy tính</h2>
+      <p class="hero-faculty" style="opacity:0;animation:fadeUp 0.8s 0.6s forwards; font-family: var(--font-serif); font-size: 16px; color: var(--mid); margin-bottom: 24px; font-style: italic;">
+        Khoa Công nghệ và Kỹ thuật Tiên tiến
+      </p>
+      <p class="hero-desc" style="opacity:0;animation:fadeUp 0.9s 0.8s forwards;">
         Chào mừng thầy cô đến với E-Portfolio của tôi. Trang web này tổng hợp toàn bộ <strong>7 nhiệm vụ học tập</strong> trong khóa học, minh chứng cho sự trưởng thành từ tư duy quản lý dữ liệu đến khả năng làm chủ Trí tuệ nhân tạo (AI).
       </p>
-      <div class="hero-email">
+      <div class="hero-email" style="opacity:0;animation:fadeUp 0.9s 1s forwards;">
         <span>✉</span>
         25112076@vnu.edu.vn
       </div>
@@ -828,9 +833,9 @@
   <!-- ─── ABOUT ─── -->
   <section class="about">
     <div class="about-visual reveal">
-      <div class="about-card about-card-main">
+      <div class="about-card about-card-main" style="background-image: linear-gradient(to top, rgba(46, 31, 26, 0.85) 0%, rgba(46, 31, 26, 0.15) 75%), url('images/about_art.png'); background-size: cover; background-position: center; border: 1px solid rgba(232, 196, 176, 0.3);">
         <div class="initials">TM</div>
-        <p>Sinh viên Khoa FATE —<br/>Đại học Việt Nhật (VJU)<br/>Đam mê công nghệ &amp; AI.</p>
+        <p>Sinh viên ngành Khoa học và Kỹ thuật Máy tính —<br/>Khoa Công nghệ và Kỹ thuật Tiên tiến (VJU)</p>
       </div>
       <div class="about-card about-card-gold">
         <span>7</span>
@@ -847,7 +852,7 @@
       <h2 class="section-title reveal">Xin chào,<br/>tôi là <em>Tuấn Minh</em></h2>
       <div class="divider reveal"></div>
       <div class="about-body reveal">
-        <p>Tôi là Ngô Tuấn Minh — sinh viên Khoa Học và Kỹ Thuật Tiên Tiến (FATE), Trường Đại học Việt Nhật (VJU). Một người luôn khao khát chinh phục những kiến thức mới trong lĩnh vực công nghệ thông tin và trí tuệ nhân tạo.</p>
+        <p>Tôi là Ngô Tuấn Minh — sinh viên ngành Khoa học và Kỹ thuật Máy tính, Khoa Công nghệ và Kỹ thuật Tiên tiến, Trường Đại học Việt Nhật (VJU). Một người luôn khao khát chinh phục những kiến thức mới trong lĩnh vực công nghệ thông tin và trí tuệ nhân tạo.</p>
         <p>Tôi tin rằng mỗi ngày là một cơ hội để học hỏi điều mới, và hành trình hoàn thiện bản thân không bao giờ có điểm kết thúc.</p>
         <p>Với tôi, công nghệ không chỉ là công cụ — đó là nghệ thuật kết nối con người với những giải pháp sáng tạo và đột phá.</p>
       </div>
@@ -861,14 +866,14 @@
         <p class="section-label reveal">Dự án</p>
         <h2 class="section-title reveal">Bài tập &amp;<br/><em>Nhiệm vụ</em> học tập</h2>
       </div>
-      <p class="section-header-right reveal">Tổng hợp 7 nhiệm vụ học tập được trình bày dưới dạng website chuyên nghiệp</p>
+      <p class="section-header-right reveal">Tổng hợp 7 bài tập được trình bày dưới dạng website chuyên nghiệp</p>
     </div>
 
     <!-- Featured Project -->
     <div class="docs-grid">
       <a href="https://ntm209.github.io/bao-cao-ai-research/" target="_blank" class="doc-card doc-card-featured reveal">
         <div class="featured-left">
-          <div class="doc-card-badge"><span class="badge-dot"></span>Nhiệm vụ mở rộng</div>
+          <div class="doc-card-badge"><span class="badge-dot"></span>Bài tập mở rộng</div>
           <h3 class="doc-card-title">Tổng Quan Tài Liệu Bằng Elicit AI</h3>
           <p class="doc-card-desc">Sử dụng AI Elicit trích xuất 5 trường thông tin phức tạp từ 6 bài báo Q1 về vật liệu MXene trong pin Lithium-ion.</p>
           <div class="doc-card-footer">
@@ -1019,13 +1024,16 @@
       </div>
       <div class="contact-item">
         <div class="icon">📖</div>
-        Công nghệ Ứng dụng (FATE)
+        <div>
+          <p style="font-weight: 500; margin-bottom: 4px;">Khoa học &amp; Kỹ thuật Máy tính</p>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.65);">Khoa Công nghệ và Kỹ thuật Tiên tiến</p>
+        </div>
       </div>
       <div class="contact-item">
         <div class="icon">🎓</div>
         <div>
           <p style="font-weight: 500; margin-bottom: 4px;">Trường Đại học Việt Nhật</p>
-          <p style="font-size: 13px; color: #9C7A72;">ĐẠI HỌC QUỐC GIA HÀ NỘI</p>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.65);">ĐẠI HỌC QUỐC GIA HÀ NỘI</p>
         </div>
       </div>
     </div>
