@@ -136,9 +136,7 @@
 
 // ---- Intersection Observer for Reveal Animations ----
 (function initReveal() {
-    const revealElements = document.querySelectorAll(
-        '.about-card, .task-card, .prompt-group, .tip-card, .gallery-item, .stat-card, .conclusion-card, .table-wrapper, .evolution-image'
-    );
+    const revealElements = document.querySelectorAll('.reveal');
 
     const observer = new IntersectionObserver(
         (entries) => {

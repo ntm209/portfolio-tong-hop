@@ -5,188 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio Tổng Hợp: Kỹ Năng Số & Ứng Dụng AI - Ngô Tuấn Minh - VJU">
     <title>E-Portfolio | Ngô Tuấn Minh - VJU</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Removed Google Fonts since it's imported in CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="particles-canvas"></canvas>
+    <div class="mesh-bg"></div>
+    <div class="noise-overlay"></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-icon">🎓</span>
-                <span class="logo-text">My<span class="accent">Portfolio</span></span>
-            </a>
-            <div class="nav-links" id="nav-links">
-                <a href="#hero" class="nav-link active">Giới thiệu</a>
-                <a href="#projects" class="nav-link">Các dự án</a>
-                <a href="#reflection" class="nav-link">Tổng kết</a>
-            </div>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
+        <a href="#" class="nav-logo">
+            <span class="logo-icon">🎓</span>
+            <span class="logo-text">My<span class="accent">Portfolio</span></span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="#hero" class="nav-link active">Giới thiệu</a>
+            <a href="#projects" class="nav-link">Các dự án</a>
+            <a href="#reflection" class="nav-link">Tổng kết</a>
         </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-bg-overlay"></div>
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="hero-badge animate-fade-in">
-                    <span class="badge-dot"></span>
+                <div class="eyebrow-badge reveal visible">
                     Portfolio Môn Học Kỹ Năng Số
                 </div>
-                <h1 class="hero-title animate-fade-in-up">
+                <h1 class="hero-title reveal delay-1">
                     Hành Trình Chinh Phục <br>
                     <span class="gradient-text">Kỹ Năng Số & AI</span>
                 </h1>
-                <p class="hero-subtitle animate-fade-in-up delay-1">
+                <p class="hero-subtitle reveal delay-2">
                     Chào mừng thầy cô đến với E-Portfolio của tôi. Trang web này tổng hợp toàn bộ <strong>7 nhiệm vụ học tập</strong> trong khóa học, minh chứng cho sự trưởng thành từ tư duy quản lý dữ liệu đến khả năng làm chủ Trí tuệ nhân tạo (AI).
                 </p>
-                <div class="hero-meta animate-fade-in-up delay-2">
+                <div class="hero-meta-grid reveal delay-3">
                     <div class="meta-item">
-                        <div class="meta-icon">👤</div>
-                        <div>
-                            <span class="meta-label">Sinh viên thực hiện</span>
-                            <span class="meta-value">Ngô Tuấn Minh (25112076)</span>
-                        </div>
+                        <span class="meta-label">Sinh viên thực hiện</span>
+                        <span class="meta-value">Ngô Tuấn Minh (25112076)</span>
                     </div>
                     <div class="meta-item">
-                        <div class="meta-icon">✉️</div>
-                        <div>
-                            <span class="meta-label">Email liên hệ</span>
-                            <span class="meta-value">25112076@vnu.edu.vn</span>
-                        </div>
+                        <span class="meta-label">Email liên hệ</span>
+                        <span class="meta-value">25112076@vnu.edu.vn</span>
                     </div>
                     <div class="meta-item">
-                        <div class="meta-icon">🏫</div>
-                        <div>
-                            <span class="meta-label">Trường / Khoa</span>
-                            <span class="meta-value">ĐH Việt Nhật (VJU) - Khoa FATE</span>
-                        </div>
+                        <span class="meta-label">Trường / Khoa</span>
+                        <span class="meta-value">ĐH Việt Nhật (VJU) - Khoa FATE</span>
                     </div>
                 </div>
-                <div class="hero-actions animate-fade-in-up delay-3">
-                    <a href="#projects" class="btn btn-primary">
+                <div class="btn-group reveal delay-3">
+                    <a href="#projects" class="btn btn-primary group">
                         <span>Khám Phá Các Dự Án</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        <span class="btn-icon-wrapper">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </span>
                     </a>
                     <a href="#reflection" class="btn btn-secondary">
                         <span>Đọc Đánh Giá</span>
                     </a>
                 </div>
             </div>
-            <div class="hero-visual profile-visual animate-fade-in delay-2">
-                <div class="profile-image-container">
+            
+            <div class="profile-shell reveal delay-2">
+                <div class="profile-core">
                     <img src="images/profile.jpg" alt="Ngô Tuấn Minh">
-                    <div class="profile-glow"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Portfolio Section -->
-    <section class="section section-dark" id="projects">
+    <section class="section" id="projects">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag">💼 Các nhiệm vụ học tập</span>
-                <h2 class="section-title">Danh Mục <span class="gradient-text">Dự Án</span></h2>
-                <p class="section-desc">Mỗi dự án là một website độc lập được thiết kế chuyên nghiệp nhằm giải quyết một vấn đề cụ thể của môn học.</p>
+            <div class="section-header reveal">
+                <span class="eyebrow-badge">Các nhiệm vụ học tập</span>
+                <h2 class="hero-title">Danh Mục <span class="gradient-text">Dự Án</span></h2>
+                <p class="hero-subtitle mx-auto text-center" style="margin-left:auto;margin-right:auto">Mỗi dự án là một website độc lập được thiết kế chuyên nghiệp nhằm giải quyết một vấn đề cụ thể của môn học.</p>
             </div>
 
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <a href="https://ntm209.github.io/anti/" target="_blank" class="project-card glass-card">
-                    <div class="project-visual bg-gradient-1">
-                        <span class="project-icon">📂</span>
+            <div class="bento-grid">
+                <!-- Project 7 (Featured moved to 1) -->
+                <a href="https://ntm209.github.io/bao-cao-ai-research/" target="_blank" class="bento-shell reveal">
+                    <div class="bento-core">
+                        <span class="bento-badge">Nhiệm vụ Mở Rộng</span>
+                        <h3>Tổng Quan Tài Liệu Bằng Elicit AI</h3>
+                        <p>Sử dụng AI Elicit trích xuất 5 trường thông tin phức tạp từ 6 bài báo Q1 về vật liệu MXene trong pin Lithium-ion.</p>
+                        <span class="bento-link">Xem chi tiết <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                     </div>
-                    <div class="project-content">
-                        <div class="project-badge">Nhiệm vụ 1</div>
+                </a>
+
+                <!-- Project 1 -->
+                <a href="https://ntm209.github.io/anti/" target="_blank" class="bento-shell reveal delay-1">
+                    <div class="bento-core">
+                        <span class="bento-badge">Nhiệm vụ 1</span>
                         <h3>Quản Lý Tệp & Thư Mục</h3>
                         <p>Xây dựng cấu trúc thư mục khoa học, quy tắc đặt tên file nhất quán nhằm tối ưu hóa tổ chức dữ liệu cá nhân.</p>
-                        <span class="project-link">Xem chi tiết ➔</span>
+                        <span class="bento-link">Xem chi tiết ➔</span>
                     </div>
                 </a>
 
                 <!-- Project 2 -->
-                <a href="https://ntm209.github.io/Ph-t-tri-n-k-n-ng-t-m-ki-m-v-nh-gi-th-ng-tin-h-c-thu-t-t-c-c-ngu-n-ng-tin-c-y/" target="_blank" class="project-card glass-card">
-                    <div class="project-visual bg-gradient-2">
-                        <span class="project-icon">🔍</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-badge">Nhiệm vụ 2</div>
+                <a href="https://ntm209.github.io/Ph-t-tri-n-k-n-ng-t-m-ki-m-v-nh-gi-th-ng-tin-h-c-thu-t-t-c-c-ngu-n-ng-tin-c-y/" target="_blank" class="bento-shell reveal delay-1">
+                    <div class="bento-core">
+                        <span class="bento-badge">Nhiệm vụ 2</span>
                         <h3>Tìm Kiếm & Đánh Giá Thông Tin</h3>
-                        <p>Sử dụng linh hoạt các toán tử tìm kiếm nâng cao (site, filetype) để tra cứu tài liệu học thuật đáng tin cậy.</p>
-                        <span class="project-link">Xem chi tiết ➔</span>
+                        <p>Sử dụng linh hoạt các toán tử tìm kiếm nâng cao để tra cứu tài liệu học thuật đáng tin cậy.</p>
+                        <span class="bento-link">Xem chi tiết ➔</span>
                     </div>
                 </a>
 
                 <!-- Project 3 -->
-                <a href="https://ntm209.github.io/bao-cao-prompt/" target="_blank" class="project-card glass-card">
-                    <div class="project-visual bg-gradient-3">
-                        <span class="project-icon">💬</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-badge">Nhiệm vụ 3</div>
+                <a href="https://ntm209.github.io/bao-cao-prompt/" target="_blank" class="bento-shell reveal">
+                    <div class="bento-core">
+                        <span class="bento-badge">Nhiệm vụ 3</span>
                         <h3>Phát Triển Kỹ Năng Viết Prompt</h3>
                         <p>Thực hành Prompt Engineering chuyên sâu, gán vai trò, cung cấp bối cảnh để AI tạo ra kết quả học tập tối ưu.</p>
-                        <span class="project-link">Xem chi tiết ➔</span>
+                        <span class="bento-link">Xem chi tiết ➔</span>
                     </div>
                 </a>
 
                 <!-- Project 4 -->
-                <a href="https://ntm209.github.io/bao-cao-collab/" target="_blank" class="project-card glass-card">
-                    <div class="project-visual bg-gradient-4">
-                        <span class="project-icon">🤝</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-badge">Nhiệm vụ 4</div>
+                <a href="https://ntm209.github.io/bao-cao-collab/" target="_blank" class="bento-shell reveal delay-1">
+                    <div class="bento-core">
+                        <span class="bento-badge">Nhiệm vụ 4</span>
                         <h3>Hợp Tác Trực Tuyến</h3>
                         <p>Sử dụng Trello, Google Docs và Drive để điều phối, quản lý tiến độ cho dự án nhóm 8 người môn Triết học.</p>
-                        <span class="project-link">Xem chi tiết ➔</span>
+                        <span class="bento-link">Xem chi tiết ➔</span>
                     </div>
                 </a>
 
                 <!-- Project 5 -->
-                <a href="https://ntm209.github.io/bao-cao-ai-creative/" target="_blank" class="project-card glass-card">
-                    <div class="project-visual bg-gradient-5">
-                        <span class="project-icon">🎨</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-badge">Nhiệm vụ 5</div>
+                <a href="https://ntm209.github.io/bao-cao-ai-creative/" target="_blank" class="bento-shell reveal delay-1">
+                    <div class="bento-core">
+                        <span class="bento-badge">Nhiệm vụ 5</span>
                         <h3>Sáng Tạo Nội Dung Với AI</h3>
                         <p>Kết hợp sức mạnh của Gemini, DALL-E 3 và Canva AI để thiết kế một Infographic chuyên nghiệp về Giáo dục.</p>
-                        <span class="project-link">Xem chi tiết ➔</span>
+                        <span class="bento-link">Xem chi tiết ➔</span>
                     </div>
                 </a>
 
                 <!-- Project 6 -->
-                <a href="https://ntm209.github.io/bao-cao-ai-ethics/" target="_blank" class="project-card glass-card">
-                    <div class="project-visual bg-gradient-6">
-                        <span class="project-icon">⚖️</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-badge">Nhiệm vụ 6</div>
+                <a href="https://ntm209.github.io/bao-cao-ai-ethics/" target="_blank" class="bento-shell reveal">
+                    <div class="bento-core">
+                        <span class="bento-badge">Nhiệm vụ 6</span>
                         <h3>AI Có Trách Nhiệm</h3>
                         <p>Phân tích chính sách liêm chính học thuật và xây dựng bộ 6 nguyên tắc cá nhân khi sử dụng AI trong học tập.</p>
-                        <span class="project-link">Xem chi tiết ➔</span>
-                    </div>
-                </a>
-
-                <!-- Project 7 -->
-                <a href="https://ntm209.github.io/bao-cao-ai-research/" target="_blank" class="project-card glass-card project-featured">
-                    <div class="project-visual bg-gradient-7">
-                        <span class="project-icon">🔬</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-badge">Nhiệm vụ Mở Rộng</div>
-                        <h3>Tổng Quan Tài Liệu Bằng Elicit AI</h3>
-                        <p>Sử dụng AI Elicit trích xuất 5 trường thông tin phức tạp từ 6 bài báo Q1 về vật liệu MXene trong pin Lithium-ion.</p>
-                        <span class="project-link">Xem chi tiết ➔</span>
+                        <span class="bento-link">Xem chi tiết ➔</span>
                     </div>
                 </a>
             </div>
@@ -196,53 +163,56 @@
     <!-- Self Reflection & Conclusion Section -->
     <section class="section" id="reflection">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag">📈 Trưởng Thành Cùng Công Nghệ</span>
-                <h2 class="section-title">Tổng Kết & <span class="gradient-text">Đánh Giá Bản Thân</span></h2>
-                <p class="section-desc">Nhìn lại chặng đường học tập, phân tích những giá trị cốt lõi thu nhận được và định hướng tương lai.</p>
+            <div class="section-header reveal">
+                <span class="eyebrow-badge">Trưởng Thành Cùng Công Nghệ</span>
+                <h2 class="hero-title">Tổng Kết & <span class="gradient-text">Đánh Giá Bản Thân</span></h2>
+                <p class="hero-subtitle mx-auto text-center" style="margin-left:auto;margin-right:auto">Nhìn lại chặng đường học tập, phân tích những giá trị cốt lõi thu nhận được và định hướng tương lai.</p>
             </div>
 
             <div class="reflection-layout">
                 <!-- Lessons Learned -->
-                <div class="reflection-card glass-card">
-                    <div class="r-icon">💡</div>
-                    <h3>Kiến thức & Kỹ năng đã học</h3>
-                    <ul class="reflection-list">
-                        <li><strong>Làm chủ không gian số:</strong> Từ việc quản lý file lộn xộn, tôi đã thiết lập được quy tắc đặt tên và cấu trúc thư mục khoa học, giúp tăng 300% tốc độ tìm kiếm tài liệu.</li>
-                        <li><strong>Tư duy khai thác thông tin:</strong> Thành thạo các toán tử tìm kiếm nâng cao (Search Operators) và công cụ AI chuyên ngành (Elicit), giúp tiếp cận nguồn tri thức học thuật chính thống thay vì thông tin rác.</li>
-                        <li><strong>Nghệ thuật giao tiếp với máy:</strong> Nắm vững kỹ thuật Prompt Engineering (Gán vai trò, cung cấp bối cảnh, định dạng đầu ra), biến AI thành một "trợ giảng" đắc lực thay vì một cỗ máy trả lời tự động.</li>
-                        <li><strong>Phát triển Web thực chiến:</strong> Tự tay xây dựng và cấu hình GitHub Pages cho 7 trang web báo cáo, nâng tầm khả năng trình bày sản phẩm số một cách chuyên nghiệp.</li>
-                    </ul>
+                <div class="reflection-shell reveal">
+                    <div class="reflection-core">
+                        <h3>Kiến thức & Kỹ năng đã học</h3>
+                        <ul class="reflection-list">
+                            <li><strong>Làm chủ không gian số:</strong> Từ việc quản lý file lộn xộn, tôi đã thiết lập được quy tắc đặt tên và cấu trúc thư mục khoa học, giúp tăng 300% tốc độ tìm kiếm tài liệu.</li>
+                            <li><strong>Tư duy khai thác thông tin:</strong> Thành thạo các toán tử tìm kiếm nâng cao (Search Operators) và công cụ AI chuyên ngành (Elicit), giúp tiếp cận nguồn tri thức học thuật chính thống thay vì thông tin rác.</li>
+                            <li><strong>Nghệ thuật giao tiếp với máy:</strong> Nắm vững kỹ thuật Prompt Engineering (Gán vai trò, cung cấp bối cảnh, định dạng đầu ra), biến AI thành một "trợ giảng" đắc lực thay vì một cỗ máy trả lời tự động.</li>
+                            <li><strong>Phát triển Web thực chiến:</strong> Tự tay xây dựng và cấu hình GitHub Pages cho 7 trang web báo cáo, nâng tầm khả năng trình bày sản phẩm số một cách chuyên nghiệp.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Challenges & Ethics -->
-                <div class="reflection-card glass-card">
-                    <div class="r-icon">⚠️</div>
-                    <h3>Thách thức & Đạo đức học thuật</h3>
-                    <ul class="reflection-list">
-                        <li><strong>Thách thức lớn nhất:</strong> Ranh giới giữa việc "sử dụng AI để hỗ trợ" và "ỷ lại vào AI". Ban đầu tôi có xu hướng tin tưởng tuyệt đối vào AI, nhưng sau đó nhận ra hiện tượng "hallucination" (ảo giác AI).</li>
-                        <li><strong>Bài học kinh nghiệm:</strong> Nguyên tắc <em>"Trust, but Verify"</em>. Mọi thông số, dữ kiện AI đưa ra đều phải được kiểm chứng. Kỹ năng tư duy phản biện (Critical Thinking) là tấm khiên vững chắc nhất.</li>
-                        <li><strong>Liêm chính học thuật:</strong> Tôi đã tự xây dựng được nguyên tắc 80/20: 80% tư duy tự thân, 20% AI hỗ trợ tinh chỉnh. Luôn minh bạch và trích dẫn rõ ràng khi có can thiệp của trí tuệ nhân tạo.</li>
-                    </ul>
+                <div class="reflection-shell reveal delay-1">
+                    <div class="reflection-core">
+                        <h3>Thách thức & Đạo đức học thuật</h3>
+                        <ul class="reflection-list">
+                            <li><strong>Thách thức lớn nhất:</strong> Ranh giới giữa việc "sử dụng AI để hỗ trợ" và "ỷ lại vào AI". Ban đầu tôi có xu hướng tin tưởng tuyệt đối vào AI, nhưng sau đó nhận ra hiện tượng "hallucination" (ảo giác AI).</li>
+                            <li><strong>Bài học kinh nghiệm:</strong> Nguyên tắc <em>"Trust, but Verify"</em>. Mọi thông số, dữ kiện AI đưa ra đều phải được kiểm chứng. Kỹ năng tư duy phản biện (Critical Thinking) là tấm khiên vững chắc nhất.</li>
+                            <li><strong>Liêm chính học thuật:</strong> Tôi đã tự xây dựng được nguyên tắc 80/20: 80% tư duy tự thân, 20% AI hỗ trợ tinh chỉnh. Luôn minh bạch và trích dẫn rõ ràng khi có can thiệp của trí tuệ nhân tạo.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Future Application -->
-                <div class="reflection-card glass-card featured-reflection">
-                    <div class="r-icon">🚀</div>
-                    <h3>Áp dụng vào định hướng tương lai</h3>
-                    <p class="reflection-text">
-                        Thế giới đang bước vào kỷ nguyên mà "AI không thay thế con người, nhưng người biết dùng AI sẽ thay thế người không biết dùng". Những kỹ năng học được từ chuỗi 7 nhiệm vụ này không chỉ phục vụ cho việc qua môn, mà là <strong>vũ khí cạnh tranh sắc bén</strong> cho sự nghiệp tương lai.
-                    </p>
-                    <p class="reflection-text">
-                        Trong thời gian tới, tôi sẽ áp dụng các bộ công cụ này (Trello, Elicit, ChatGPT Plus, Canva) vào quá trình làm Đồ án Tốt nghiệp và Nghiên cứu khoa học. Tôi tin rằng với tư duy hệ thống, khả năng khai thác công nghệ và nền tảng đạo đức vững vàng, tôi đã sẵn sàng trở thành một <strong>công dân số ưu tú</strong> trong môi trường làm việc toàn cầu.
-                    </p>
+                <div class="reflection-shell featured-reflection reveal delay-2">
+                    <div class="reflection-core">
+                        <h3>Áp dụng vào định hướng tương lai</h3>
+                        <p style="margin-bottom:1rem;color:var(--text-secondary)">
+                            Thế giới đang bước vào kỷ nguyên mà "AI không thay thế con người, nhưng người biết dùng AI sẽ thay thế người không biết dùng". Những kỹ năng học được từ chuỗi 7 nhiệm vụ này không chỉ phục vụ cho việc qua môn, mà là <strong>vũ khí cạnh tranh sắc bén</strong> cho sự nghiệp tương lai.
+                        </p>
+                        <p style="color:var(--text-secondary)">
+                            Trong thời gian tới, tôi sẽ áp dụng các bộ công cụ này (Trello, Elicit, ChatGPT Plus, Canva) vào quá trình làm Đồ án Tốt nghiệp và Nghiên cứu khoa học. Tôi tin rằng với tư duy hệ thống, khả năng khai thác công nghệ và nền tảng đạo đức vững vàng, tôi đã sẵn sàng trở thành một <strong>công dân số ưu tú</strong> trong môi trường làm việc toàn cầu.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -251,15 +221,11 @@
                 </div>
                 <p>E-Portfolio thiết kế bởi Ngô Tuấn Minh (25112076)</p>
                 <p>Báo cáo môn Kỹ Năng Số - Trường Đại học Việt Nhật (VJU)</p>
-                <div class="footer-divider"></div>
-                <p class="footer-copyright">© 2026 Ngô Tuấn Minh. Tự hào xây dựng với sự hỗ trợ của AI.</p>
+                <br>
+                <p style="font-size:0.75rem">© 2026 Ngô Tuấn Minh. Tự hào xây dựng với sự hỗ trợ của AI.</p>
             </div>
         </div>
     </footer>
-
-    <button class="back-to-top" id="backToTop" aria-label="Quay lại đầu trang">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-    </button>
 
     <script src="script.js"></script>
 </body>
